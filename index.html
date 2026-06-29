@@ -131,6 +131,25 @@
     }
     .demo-link:hover { transform: translateY(-1px); border-color: var(--green-bright); }
 
+    /* ---------- Showcase ---------- */
+    .showcase-head { text-align: center; }
+    .showcase-row { margin-top: 80px; }
+    .showcase-row:first-of-type { margin-top: 48px; }
+    .showcase-copy { text-align: center; max-width: 640px; margin-inline: auto; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .82rem;
+      color: var(--green-deep); background: rgba(76,180,117,.14); padding: 6px 14px; border-radius: 999px;
+    }
+    .pill .n { font-variant-numeric: tabular-nums; opacity: .65; }
+    .showcase-row h3 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; margin: 16px 0 10px; }
+    .showcase-row p { color: var(--muted); font-size: 1.05rem; }
+    .shot {
+      margin: 32px auto 0; width: min(960px, 100%);
+      background: linear-gradient(180deg, rgba(76,180,117,.10), rgba(173,224,74,.06));
+      border: 1px solid var(--line); border-radius: 28px; padding: 28px 24px 8px;
+    }
+    .shot img { display: block; width: 100%; height: auto; filter: drop-shadow(0 24px 40px rgba(18,20,18,.12)); }
+
     /* ---------- Mission ---------- */
     .mission { text-align: center; }
     .mission-statement {
@@ -205,6 +224,7 @@
       </a>
       <nav class="nav-links">
         <a href="#demo">Demo</a>
+        <a href="#showcase">App</a>
         <a href="#mission">Mission</a>
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
@@ -262,6 +282,44 @@
           <span class="hl">circulating assets</span> — building a culture of
           <span class="hl">circulation, not disposal.</span>
         </p>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="block" id="showcase">
+      <div class="wrap">
+        <div class="showcase-head reveal">
+          <span class="eyebrow">Inside the app</span>
+          <h2 class="section-title">Three steps, one loop</h2>
+          <p class="section-sub" style="margin-inline:auto;">Dashboard, Resources, and Status work together to turn surplus into shared, measurable circulation.</p>
+        </div>
+
+        <div class="showcase-row reveal">
+          <div class="showcase-copy">
+            <span class="pill"><span class="n">01</span> Dashboard</span>
+            <h3>See your circular impact</h3>
+            <p>View your carbon footprint, estimated savings, and local circulation activity at a glance.</p>
+          </div>
+          <div class="shot"><img src="assets/shot-dashboard.png" alt="Re:Source Dashboard — carbon footprint, estimated savings, and circulation activity" loading="lazy" /></div>
+        </div>
+
+        <div class="showcase-row reveal">
+          <div class="showcase-copy">
+            <span class="pill"><span class="n">02</span> Resources</span>
+            <h3>Find it, then match it</h3>
+            <p>Browse nearby resources by location, then review each listing before applying. When a recipient submits a request, the provider can review the applicant and confirm the match.</p>
+          </div>
+          <div class="shot"><img src="assets/shot-resources.png" alt="Re:Source Resources — browse nearby by map, review a listing, and confirm an applicant" loading="lazy" /></div>
+        </div>
+
+        <div class="showcase-row reveal">
+          <div class="showcase-copy">
+            <span class="pill"><span class="n">03</span> Status</span>
+            <h3>Confirm with a QR, earn rewards</h3>
+            <p>QR confirmation records a completed handover for both the provider and recipient. Both users earn participation rewards, which can support priority in future resource requests.</p>
+          </div>
+          <div class="shot"><img src="assets/shot-status.png" alt="Re:Source Status — shared resources, accepting an applicant, and QR pickup confirmation" loading="lazy" /></div>
+        </div>
       </div>
     </section>
 
