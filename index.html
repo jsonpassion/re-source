@@ -109,6 +109,28 @@
     .section-title { font-size: clamp(1.8rem, 4vw, 2.7rem); font-weight: 800; letter-spacing: -0.02em; margin-top: 10px; }
     .section-sub { color: var(--muted); max-width: 640px; margin-top: 14px; font-size: 1.05rem; }
 
+    /* ---------- Demo ---------- */
+    .demo { text-align: center; }
+    .demo-stage {
+      position: relative; margin: 44px auto 0; width: min(320px, 80vw);
+    }
+    .demo-stage::before {
+      content: ""; position: absolute; inset: -8% -16%; z-index: -1; border-radius: 48px;
+      background: radial-gradient(60% 60% at 50% 30%, rgba(76,180,117,.28), transparent 72%);
+    }
+    .phone {
+      border-radius: 44px; padding: 10px; background: #121412;
+      box-shadow: 0 40px 80px -32px rgba(18,20,18,.55), 0 0 0 1px rgba(18,20,18,.9);
+    }
+    .phone video { display: block; width: 100%; border-radius: 34px; background: #000; }
+    .demo-link {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 28px;
+      font-weight: 600; font-size: .92rem; color: var(--green-deep);
+      background: var(--card); border: 1px solid var(--line); padding: 10px 18px; border-radius: 999px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .demo-link:hover { transform: translateY(-1px); border-color: var(--green-bright); }
+
     /* ---------- Mission ---------- */
     .mission { text-align: center; }
     .mission-statement {
@@ -182,6 +204,7 @@
         <span>Re:Source</span>
       </a>
       <nav class="nav-links">
+        <a href="#demo">Demo</a>
         <a href="#mission">Mission</a>
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
@@ -205,6 +228,28 @@
           <a class="btn btn-primary" href="#features">Explore the platform</a>
           <a class="btn btn-ghost" href="#mission">Why it matters</a>
         </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section class="block demo" id="demo">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">See it in action</span>
+          <h2 class="section-title">A walkthrough of Re:Source</h2>
+          <p class="section-sub" style="margin-inline:auto;">Screen recording from the Seoul Design Award 2026 submission — from dashboard impact to listing, discovery, and QR handoff.</p>
+        </div>
+        <div class="demo-stage reveal">
+          <div class="phone">
+            <video
+              src="assets/resource-demo.mp4"
+              poster="assets/demo-poster.jpg"
+              controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+        <a class="demo-link" href="assets/resource-demo.mp4" target="_blank" rel="noopener">
+          Open video in a new tab ↗
+        </a>
       </div>
     </section>
 
